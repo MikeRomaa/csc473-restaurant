@@ -3,21 +3,22 @@ import { Instagram, Logo, TikTok, Yelp } from "./Icons";
 export const Footer: React.FC = () => (
     <footer className="bg-background font-serif font-medium text-black/50">
         <section className="container mx-auto py-10 border-t-2 border-black/20">
-            <div className="flex gap-10 items-center">
+            <div className="flex flex-wrap gap-10 items-center justify-center xl:justify-start">
                 <div className="flex flex-col gap-5 items-center">
                     <Logo />
                     <div className="flex gap-3">
-                        <a href="https://www.instagram.com/duocafe.nyc/">
+                        <a target="_blank" rel="noreferrer" href="https://www.instagram.com/duocafe.nyc/">
                             <Instagram />
                         </a>
-                        <a href="https://www.tiktok.com/@duocafe.nyc">
+                        <a target="_blank" rel="noreferrer" href="https://www.tiktok.com/@duocafe.nyc">
                             <TikTok />
                         </a>
-                        <a href="https://www.yelp.com/biz/duo-cafe-new-york">
+                        <a target="_blank" rel="noreferrer" href="https://www.yelp.com/biz/duo-cafe-new-york">
                             <Yelp />
                         </a>
                     </div>
                 </div>
+
                 <div>
                     <a className="text-lg underline" href="tel:+16464540603">
                         +1 (646) 454-0603
@@ -28,6 +29,7 @@ export const Footer: React.FC = () => (
                         New York, NY 10003
                     </p>
                 </div>
+
                 <table className="border-separate border-spacing-x-3">
                     <tr>
                         <th className="text-right">Monday</th>

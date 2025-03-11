@@ -27,25 +27,40 @@ export const Navbar: React.FC = () => {
                 ${isHomepage && scroll ? "bg-background border-accent" : "border-transparent"}`}
         >
             <div className={`container mx-auto flex gap-5 items-center py-5 ${scroll ? "text-inherit" : "text-white"}`}>
-                <Link to="/" className="mr-auto">
+                <Link to="/" className="ml-5 mr-auto">
                     <Logo />
                 </Link>
-                <HashLink smooth to="/#about-us" className="mr-5">
+                <HashLink smooth to="/#about-us" className="mr-2 xl:mr-5">
                     About
                 </HashLink>
-                <Link to="/menu" className="mr-5">
+                <Link to="/menu" className="mr-2 xl:mr-5">
                     Menu
                 </Link>
-                <Link to="/contact" className="mr-10">
+                <Link to="/contact" className="mr-5 xl:mr-10">
                     Contact
                 </Link>
-                <a href="https://www.instagram.com/duocafe.nyc/">
+                <a
+                    className="hidden xl:block"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.instagram.com/duocafe.nyc/"
+                >
                     <Instagram />
                 </a>
-                <a href="https://www.tiktok.com/@duocafe.nyc">
+                <a
+                    className="hidden xl:block"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.tiktok.com/@duocafe.nyc"
+                >
                     <TikTok />
                 </a>
-                <a href="https://www.yelp.com/biz/duo-cafe-new-york">
+                <a
+                    className="hidden xl:block"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.yelp.com/biz/duo-cafe-new-york"
+                >
                     <Yelp />
                 </a>
             </div>

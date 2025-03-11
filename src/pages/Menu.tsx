@@ -1,32 +1,47 @@
 export const Menu: React.FC = () => (
     <main className="bg-background font-serif text-xl">
-        <section className="container mx-auto py-20 gap-20">
+        <section className="container mx-auto py-20">
             <h1 className="text-6xl font-display mb-4">Menu</h1>
 
-            <div className="flex gap-20 mb-14">
+            <div className="flex gap-x-20 gap-y-10 mb-14 flex-wrap justify-center">
                 <figure className="flex flex-col">
-                    <img src="/menu-1.jpg" alt="Sweet & Tea Set" className="h-96 rounded-lg" />
+                    <img src="/menu-1.jpg" alt="Sweet & Tea Set" className="h-96 rounded-lg object-cover" />
                     <caption className="font-medium">Sweet &amp; Tea Set</caption>
                 </figure>
 
                 <figure className="flex flex-col">
-                    <img src="/menu-3.jpg" alt="Sweet & Tea Set" className="h-96 rounded-lg" />
+                    <img src="/menu-3.jpg" alt="Sweet & Tea Set" className="h-96 rounded-lg object-cover" />
                     <caption className="font-medium">Sweet & Tea Set</caption>
                 </figure>
 
                 <figure className="flex flex-col">
-                    <img src="/menu-2.jpg" alt="Tea Testing Flight" className="h-96 rounded-lg" />
+                    <img src="/menu-2.jpg" alt="Tea Testing Flight" className="h-96 rounded-lg object-cover" />
                     <caption className="font-medium">Tea Testing Flight</caption>
                 </figure>
             </div>
 
-            <div className="grid grid-cols-3 gap-10">
+            <div className="grid xl:grid-cols-3 gap-10 justify-center">
                 <article>
                     <h2 className="text-4xl font-display font-bold mb-4">Tea Testing Flight</h2>
                     <p className="text-3xl font-display">$42</p>
                     <ul className="list-inside list-['–_']">
                         <li>Choice of 3 teas</li>
                         <li>Green tea cookie</li>
+                    </ul>
+                </article>
+                <article className="xl:row-start-2">
+                    <h2 className="text-4xl font-display font-bold mb-4">Sweet &amp; Tea Set</h2>
+                    <p className="text-3xl font-display">$39</p>
+                    <ul className="list-inside list-['–_']">
+                        <li>One choice of tea</li>
+                        <li>Snacks and seasonal fruit</li>
+                        <li>
+                            Sweet snacks <em>[ Upgrade to cake + $6 ]</em>
+                        </li>
+                        <li>Caramelized sweet potato</li>
+                        <li>
+                            <em>[ Add one scoop of ice cream + $4 ]</em>
+                        </li>
                     </ul>
                 </article>
 
@@ -79,7 +94,6 @@ export const Menu: React.FC = () => (
                         </tr>
                     </table>
                 </article>
-
                 <article className="row-span-2">
                     <h2 className="text-4xl font-display font-bold mb-4">Snacks</h2>
                     <table className="text-left border-separate border-spacing-x-3">
@@ -120,22 +134,6 @@ export const Menu: React.FC = () => (
                             <td>$6.5</td>
                         </tr>
                     </table>
-                </article>
-
-                <article>
-                    <h2 className="text-4xl font-display font-bold mb-4">Sweet &amp; Tea Set</h2>
-                    <p className="text-3xl font-display">$39</p>
-                    <ul className="list-inside list-['–_']">
-                        <li>One choice of tea</li>
-                        <li>Snacks and seasonal fruit</li>
-                        <li>
-                            Sweet snacks <em>[ Upgrade to cake + $6 ]</em>
-                        </li>
-                        <li>Caramelized sweet potato</li>
-                        <li>
-                            <em>[ Add one scoop of ice cream + $4 ]</em>
-                        </li>
-                    </ul>
                 </article>
             </div>
         </section>

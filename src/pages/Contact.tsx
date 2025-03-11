@@ -1,6 +1,6 @@
 export const Contact: React.FC = () => (
     <main className="bg-background font-serif text-xl">
-        <section className="container mx-auto py-20 grid grid-cols-2 gap-20">
+        <section className="container mx-auto py-20 grid xl:grid-cols-2 gap-20">
             <div>
                 <h1 className="text-6xl font-display mb-4">Contact Us</h1>
                 <form action="">

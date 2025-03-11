@@ -45,7 +45,7 @@ export const Gallery: React.FC = () => {
     }, [idx]);
 
     return (
-        <section className="container mx-auto flex items-center gap-10">
+        <section className="container mx-auto flex items-center px-2 gap-3 xl:gap-10">
             <button
                 type="button"
                 className="cursor-pointer border-2 rounded-full p-1"
@@ -61,7 +61,8 @@ export const Gallery: React.FC = () => {
                         src={src}
                         alt={alt}
                         onClick={() => updateIdx(i)}
-                        className={`cursor-pointer rounded-lg transition-opacity duration-150 ${idx === i ? "opacity-100" : "opacity-75"}`}
+                        className={`cursor-pointer rounded-lg object-cover transition-opacity duration-150
+                            ${idx === i ? "opacity-100" : "opacity-75"}`}
                     />
                 ))}
             </div>

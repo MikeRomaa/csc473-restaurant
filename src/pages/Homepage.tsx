@@ -4,23 +4,25 @@ import { Gallery } from "../components/Gallery";
 
 export const Homepage: React.FC = () => (
     <>
-        <header id="hero" className="grid grid-cols-2 items-center h-[800px] bg-accent text-white">
-            <div className="mx-32">
-                <h1 className="text-8xl font-display">DUO Café</h1>
-                <p className="text-2xl font-serif">223 EAST 5th ST, EAST VILLAGE</p>
-            </div>
-            <div className="relative h-full">
-                <img
-                    src="/banner-1.jpg"
-                    alt="View from the interior"
-                    className="rounded-xl shadow-2xl h-[500px] absolute top-24 -rotate-2"
-                />
-                <img
-                    src="/banner-2.jpg"
-                    alt="Platter with tea and seasonal snacks"
-                    className="rounded-xl shadow-2xl h-[500px] absolute top-64 left-72 rotate-6"
-                />
-            </div>
+        <header id="hero" className="bg-accent text-white">
+            <section className="h-[800px] container mx-auto grid xl:grid-cols-2 items-center justify-center ">
+                <div className="text-center xl:text-left xl:mx-32">
+                    <h1 className="text-8xl font-display">DUO Café</h1>
+                    <p className="text-2xl font-serif">223 EAST 5th ST, EAST VILLAGE</p>
+                </div>
+                <div className="relative h-full w-full">
+                    <img
+                        src="/banner-1.jpg"
+                        alt="View from the interior"
+                        className="rounded-xl shadow-2xl h-[300px] xl:h-[500px] absolute -top-32 xl:top-38 xl:left-0 -rotate-2"
+                    />
+                    <img
+                        src="/banner-2.jpg"
+                        alt="Platter with tea and seasonal snacks"
+                        className="rounded-xl shadow-2xl h-[300px] xl:h-[500px] absolute xl:top-60 left-32 xl:left-72 rotate-6"
+                    />
+                </div>
+            </section>
         </header>
         <main className="bg-background font-serif text-xl">
             <section className="container mx-auto py-20">
