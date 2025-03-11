@@ -44,6 +44,8 @@ jobs:
       - run: npm install
       - run: npm run build
 
+      - run: curl https://raw.githubusercontent.com/rafgraph/spa-github-pages/4b898016074be230db5196111c7b3ad866914764/404.html > dist/404.html
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
