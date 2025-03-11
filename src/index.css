@@ -1,1 +1,52 @@
 @import "tailwindcss";
+
+@import "@fontsource/reenie-beanie";
+@import "@fontsource-variable/alegreya";
+
+@theme {
+    --font-display: "Reenie Beanie", "sans-serif";
+    --font-serif: "Alegreya Variable", "serif";
+
+    --color-background: oklch(0.97 0.03 75.28);
+    --color-accent: oklch(0.42 0.09 140.51);
+}
+
+@layer base {
+    label {
+        @apply block;
+    }
+
+    input,
+    textarea {
+        @apply mb-4 w-full rounded-lg px-5 py-2 bg-white ring-0 ring-transparent outline-none transition-shadow duration-150;
+
+        &:focus {
+            @apply ring-2 ring-accent;
+        }
+    }
+}
+
+#root {
+    @apply min-h-screen flex flex-col;
+
+    > :last-child {
+        @apply grow;
+    }
+}
+
+#hero {
+    @apply relative;
+
+    h1,
+    p {
+        @apply relative z-10;
+    }
+
+    &:before {
+        @apply content-[''] absolute z-auto inset-0 w-full h-full bg-[url(/background-tile.svg)] bg-repeat;
+    }
+}
+
+.btn-accent {
+    @apply cursor-pointer rounded-xl shadow-lg bg-accent text-white font-medium px-5 py-2;
+}
