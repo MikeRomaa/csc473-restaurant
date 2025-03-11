@@ -41,7 +41,7 @@ export const Homepage: React.FC = () => (
 
             <Gallery />
 
-            <section className="container mx-auto py-20 w-1/2 text-center gap-20">
+            <section className="container mx-auto py-20 xl:w-1/2 text-center gap-20">
                 <article>
                     <p className="mb-5">
                         Explore our thoughtfully curated menu, featuring a wide range of premium Chinese teas and

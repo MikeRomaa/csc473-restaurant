@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 
 import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
+import { InitialScroll } from "./components/ScrollToTop";
 import { Contact } from "./pages/Contact";
 import { Homepage } from "./pages/Homepage";
 import { Menu } from "./pages/Menu";
@@ -15,6 +16,7 @@ const root = document.getElementById("root") as HTMLElement;
 createRoot(root).render(
     <StrictMode>
         <BrowserRouter>
+            <InitialScroll />
             <Navbar />
             <Routes>
                 <Route index element={<Homepage />} />

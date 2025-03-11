@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router";
 import { useLocation } from "react-router";
-import { HashLink } from "react-router-hash-link";
 
 import { Instagram, Logo, TikTok, Yelp } from "./Icons";
 
@@ -30,9 +29,9 @@ export const Navbar: React.FC = () => {
                 <Link to="/" className="ml-5 mr-auto">
                     <Logo />
                 </Link>
-                <HashLink smooth to="/#about-us" className="mr-2 xl:mr-5">
+                <Link to="/#about-us" className="mr-2 xl:mr-5">
                     About
-                </HashLink>
+                </Link>
                 <Link to="/menu" className="mr-2 xl:mr-5">
                     Menu
                 </Link>
