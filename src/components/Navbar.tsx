@@ -2,7 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router";
 import { useLocation } from "react-router";
 
-import { Instagram, Logo, TikTok, Yelp } from "./Icons";
+import { CartDropdown } from "./CartDropdown";
+import { Logo } from "./Icons";
 
 const SCROLL_THRESHOLD = 100;
 
@@ -25,8 +26,8 @@ export const Navbar: React.FC = () => {
                 ${isHomepage ? "fixed" : "sticky bg-accent text-white"}
                 ${isHomepage && scroll ? "bg-background border-accent" : "border-transparent"}`}
         >
-            <div className={`container mx-auto flex gap-5 items-center py-5 ${scroll ? "text-inherit" : "text-white"}`}>
-                <Link to="/" className="ml-5 mr-auto">
+            <div className={`container mx-auto flex items-center py-5 ${scroll ? "text-inherit" : "text-white"}`}>
+                <Link to="/" className="mr-auto">
                     <Logo />
                 </Link>
                 <Link to="/#about-us" className="mr-2 xl:mr-5">
@@ -35,33 +36,10 @@ export const Navbar: React.FC = () => {
                 <Link to="/menu" className="mr-2 xl:mr-5">
                     Menu
                 </Link>
-                <Link to="/contact" className="mr-5 xl:mr-10">
+                <Link to="/contact" className="mr-2 xl:mr-10">
                     Contact
                 </Link>
-                <a
-                    className="hidden xl:block"
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://www.instagram.com/duocafe.nyc/"
-                >
-                    <Instagram />
-                </a>
-                <a
-                    className="hidden xl:block"
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://www.tiktok.com/@duocafe.nyc"
-                >
-                    <TikTok />
-                </a>
-                <a
-                    className="hidden xl:block"
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://www.yelp.com/biz/duo-cafe-new-york"
-                >
-                    <Yelp />
-                </a>
+                <CartDropdown />
             </div>
         </nav>
     );
